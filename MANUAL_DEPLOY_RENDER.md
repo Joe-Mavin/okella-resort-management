@@ -35,9 +35,9 @@ The Blueprint approach is having issues. Let's deploy manually - it's actually f
    NODE_ENV=production
    PORT=10000
    
-   MONGODB_URI=mongodb+srv://mervocklads_db_user:R7M8DTzmxHqly1xJ@cluster0.5y0ugny.mongodb.net/resort-management?retryWrites=true&w=majority&appName=Cluster0
+   MONGODB_URI=your-mongodb-connection-string-from-atlas
    
-   JWT_SECRET=luxury-resort-secret-key-mervocklads-2024-super-secure-string-change-in-production
+   JWT_SECRET=your-super-secret-jwt-key-change-this-in-production
    JWT_EXPIRE=7d
    JWT_COOKIE_EXPIRE=7
    

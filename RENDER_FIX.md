@@ -126,7 +126,7 @@ Don't forget to add these in Render dashboard:
 
 ### Required (Backend):
 ```
-MONGODB_URI=mongodb+srv://mervocklads_db_user:R7M8DTzmxHqly1xJ@cluster0.5y0ugny.mongodb.net/resort-management?retryWrites=true&w=majority&appName=Cluster0
+MONGODB_URI=your-mongodb-connection-string-from-atlas
 
 CLOUDINARY_CLOUD_NAME=your-cloud-name
 CLOUDINARY_API_KEY=your-api-key

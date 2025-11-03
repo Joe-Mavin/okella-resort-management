@@ -39,7 +39,7 @@ git push -u origin main
    For `okella-resort-api` service, add:
    
    ```
-   MONGODB_URI=mongodb+srv://mervocklads_db_user:R7M8DTzmxHqly1xJ@cluster0.5y0ugny.mongodb.net/resort-management?retryWrites=true&w=majority&appName=Cluster0
+   MONGODB_URI=your-mongodb-connection-string
    
    CLOUDINARY_CLOUD_NAME=your-cloudinary-name
    CLOUDINARY_API_KEY=your-cloudinary-key
@@ -85,10 +85,12 @@ git push -u origin main
 
 ## 🆓 FREE Services You Need
 
-### 1. MongoDB Atlas (Already configured!)
-✅ Connection string is already in the deployment config
-✅ Database: `resort-management`
-✅ No action needed!
+### 1. MongoDB Atlas (Required - FREE)
+1. Sign up: [mongodb.com/cloud/atlas](https://www.mongodb.com/cloud/atlas)
+2. Create a FREE cluster
+3. Create database user with username and password
+4. Whitelist all IPs (0.0.0.0/0) for Render access
+5. Get connection string and add to Render environment variables
 
 ### 2. Cloudinary (Required for images)
 1. Sign up: [cloudinary.com](https://cloudinary.com)

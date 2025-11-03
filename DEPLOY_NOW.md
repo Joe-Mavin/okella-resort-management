@@ -96,12 +96,20 @@ Follow prompts, done! ⚡
 
 ## 🔑 Required Services (All FREE)
 
-### 1. MongoDB Atlas ✅ ALREADY CONFIGURED!
-Your deployment uses an existing database:
-```
-mongodb+srv://mervocklads_db_user:R7M8DTzmxHqly1xJ@cluster0.5y0ugny.mongodb.net/resort-management
-```
-**No action needed!**
+### 1. MongoDB Atlas (REQUIRED - 5 min setup)
+**For database storage**
+
+1. Sign up: https://www.mongodb.com/cloud/atlas
+2. Create FREE cluster (M0 Sandbox)
+3. Create database user with username and password
+4. Network Access → Add IP: 0.0.0.0/0 (allow from anywhere)
+5. Get connection string
+6. Add `MONGODB_URI` to Render environment variables
+
+**Free Tier:**
+- 512MB storage
+- Shared RAM
+- Perfect for starting!
 
 ### 2. Cloudinary (REQUIRED - 2 min setup)
 **For image uploads and gallery**
