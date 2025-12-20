@@ -96,7 +96,6 @@ bookingSchema.pre('save', async function(next) {
 // Index for faster searches
 bookingSchema.index({ user: 1, status: 1 });
 bookingSchema.index({ room: 1, checkInDate: 1, checkOutDate: 1 });
-bookingSchema.index({ bookingReference: 1 });
 
 // Method to check if dates overlap with existing bookings
 bookingSchema.statics.checkAvailability = async function(roomId, checkIn, checkOut, excludeBookingId = null) {

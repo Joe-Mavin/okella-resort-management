@@ -82,7 +82,6 @@ paymentSchema.pre('save', async function(next) {
 paymentSchema.index({ booking: 1, status: 1 });
 paymentSchema.index({ user: 1, createdAt: -1 });
 paymentSchema.index({ 'mpesa.transactionID': 1 });
-paymentSchema.index({ transactionReference: 1 });
 
 const Payment = mongoose.model('Payment', paymentSchema);
 
