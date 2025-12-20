@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   FiUpload, FiEdit, FiTrash2, FiEye, FiEyeOff, FiStar, 
@@ -428,7 +428,7 @@ const GalleryManagement = () => {
                   <div className="text-xs text-gray-500 space-y-1">
                     <div>Order: {image.order}</div>
                     {image.metadata && (
-                      <div>{image.metadata.width}Ã—{image.metadata.height}</div>
+                      <div>{image.metadata.width}×{image.metadata.height}</div>
                     )}
                   </div>
                 </div>

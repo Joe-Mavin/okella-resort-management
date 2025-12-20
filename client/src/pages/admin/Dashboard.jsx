@@ -1,4 +1,4 @@
-﻿import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { FiUsers, FiHome, FiDollarSign, FiCalendar, FiTrendingUp, FiArrowUp, FiArrowDown } from 'react-icons/fi'
@@ -75,7 +75,7 @@ const Dashboard = () => {
     blue: 'bg-blue-100 text-blue-600',
     green: 'bg-green-100 text-green-600',
     purple: 'bg-purple-100 text-purple-600',
-    orange: 'bg-orange-100 text-primary-600'
+    orange: 'bg-primary-100 text-primary-600'
   }
 
   return (
