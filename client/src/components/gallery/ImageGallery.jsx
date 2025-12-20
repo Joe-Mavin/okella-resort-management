@@ -18,20 +18,37 @@ const ImageGallery = ({
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
-    if (!images.length && category) {
+    if (images.length) {
+      setGalleryImages(images);
+      setLoading(false);
+    } else {
       fetchImages();
     }
-  }, [category, limit]);
+  }, [images, category, limit]);
 
   const fetchImages = async () => {
     setLoading(true);
     try {
-      const result = await galleryService.getImagesByCategory(category, limit);
+      let result;
+
+      if (category) {
+        result = await galleryService.getImagesByCategory(category, limit);
+      } else {
+        const params = { active: 'true' };
+        if (limit) {
+          params.limit = limit;
+        }
+        result = await galleryService.getImages(params);
+      }
+
       if (result.success) {
         setGalleryImages(result.data);
+      } else {
+        setGalleryImages([]);
       }
     } catch (error) {
       console.error('Failed to fetch gallery images:', error);
+      setGalleryImages([]);
     } finally {
       setLoading(false);
     }

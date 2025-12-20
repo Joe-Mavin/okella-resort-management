@@ -1,4 +1,18 @@
-import React, { useState } from 'react';
+  useEffect(() => {
+    const handleResize = () => {
+      const desktop = getIsDesktop();
+      setIsDesktop(desktop);
+      if (desktop) {
+        setIsSidebarOpen(true);
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
@@ -7,7 +21,10 @@ import {
 } from 'react-icons/fi';
 
 const AdminNavigation = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const getIsDesktop = () => (typeof window !== 'undefined' ? window.innerWidth >= 1024 : false);
+
+  const [isDesktop, setIsDesktop] = useState(getIsDesktop);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(getIsDesktop);
   const location = useLocation();
 
   const navItems = [
@@ -42,7 +59,7 @@ const AdminNavigation = () => {
       </div>
 
       {/* Overlay for mobile */}
-      {isSidebarOpen && (
+      {isSidebarOpen && !isDesktop && (
         <div
           className="lg:hidden fixed inset-0 bg-black/50 z-40"
           onClick={() => setIsSidebarOpen(false)}
@@ -55,6 +72,7 @@ const AdminNavigation = () => {
         animate={{
           x: isSidebarOpen ? 0 : '-100%'
         }}
+        transition={{ type: 'tween', duration: 0.3 }}
         className={`fixed left-0 top-0 h-full w-64 bg-white shadow-xl z-50 lg:translate-x-0 lg:static lg:shadow-none border-r border-gray-200`}
       >
         <div className="p-6">

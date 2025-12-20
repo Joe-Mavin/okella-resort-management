@@ -14,7 +14,6 @@ const RoomsShowcase = () => {
       id: 1,
       name: 'Scorpion Suite',
       description: 'Luxurious suite with panoramic views and premium amenities',
-      price: 15000,
       capacity: 2,
       size: '45 sqm',
       amenities: ['King Bed', 'Private Balcony', 'Mini Bar', 'Smart TV'],
@@ -29,7 +28,6 @@ const RoomsShowcase = () => {
       id: 2,
       name: 'Desert Oasis Room',
       description: 'Comfortable room with modern amenities and garden views',
-      price: 8500,
       capacity: 2,
       size: '32 sqm',
       amenities: ['Queen Bed', 'Garden View', 'Work Desk', 'Air Conditioning'],
@@ -44,7 +42,6 @@ const RoomsShowcase = () => {
       id: 3,
       name: 'Family Villa',
       description: 'Spacious villa perfect for families with separate living area',
-      price: 25000,
       capacity: 4,
       size: '75 sqm',
       amenities: ['2 Bedrooms', 'Living Room', 'Kitchenette', 'Private Terrace'],
@@ -142,8 +139,8 @@ const RoomsShowcase = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     
                     {/* Price Badge */}
-                    <div className="absolute top-4 right-4 bg-primary-500 text-white px-4 py-2 rounded-full font-semibold">
-                      KES {room.price.toLocaleString()}/night
+                    <div className="absolute top-4 right-4 bg-primary-500 text-white px-4 py-2 rounded-full font-semibold uppercase">
+                      Coming Soon
                     </div>
                   </div>
 
@@ -187,14 +184,10 @@ const RoomsShowcase = () => {
                       </div>
                     </div>
 
-                    {/* Book Button */}
-                    <Link
-                      to={`/rooms/${room.id}`}
-                      className="group/btn w-full bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white py-4 rounded-2xl font-semibold transition-all duration-300 flex items-center justify-center"
-                    >
-                      Book Now
-                      <FiArrowRight className="ml-2 transition-transform group-hover/btn:translate-x-1" />
-                    </Link>
+                    {/* Coming Soon CTA */}
+                    <div className="w-full bg-gray-100 text-gray-500 py-4 rounded-2xl font-semibold text-center">
+                      Coming Soon
+                    </div>
                   </div>
                 </div>
               </motion.div>
