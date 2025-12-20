@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 const Logo = ({ className = '', size = 'default', variant = 'full' }) => {
   const sizes = {
@@ -10,8 +10,8 @@ const Logo = ({ className = '', size = 'default', variant = 'full' }) => {
 
   const { width, height, text } = sizes[size];
 
-  // Scorpion SVG Logo
-  const ScorpionIcon = () => (
+  // Sunrise over calm water icon (water-inspired, blue palette)
+  const ResortIcon = () => (
     <svg
       width={width}
       height={height}
@@ -19,75 +19,62 @@ const Logo = ({ className = '', size = 'default', variant = 'full' }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      role="img"
+      aria-label="Okella Resort sunrise over water logo"
     >
-      {/* Scorpion Body */}
-      <g className="scorpion-body">
-        {/* Main body segments */}
-        <ellipse cx="50" cy="45" rx="12" ry="16" fill="currentColor" opacity="0.9"/>
-        <ellipse cx="50" cy="58" rx="10" ry="12" fill="currentColor" opacity="0.85"/>
-        <ellipse cx="50" cy="68" rx="8" ry="10" fill="currentColor" opacity="0.8"/>
-        
-        {/* Tail segments - curved upward */}
-        <ellipse cx="52" cy="76" rx="6" ry="8" fill="currentColor" opacity="0.75"/>
-        <ellipse cx="55" cy="82" rx="5" ry="7" fill="currentColor" opacity="0.7"/>
-        <ellipse cx="59" cy="86" rx="4" ry="6" fill="currentColor" opacity="0.65"/>
-        <ellipse cx="64" cy="88" rx="3.5" ry="5" fill="currentColor" opacity="0.6"/>
-        
-        {/* Stinger - sharp point */}
-        <path
-          d="M 67 88 Q 72 86 75 82 L 78 80 L 76 82 L 73 85 Q 70 88 67 89 Z"
-          fill="currentColor"
-          opacity="0.9"
-        />
-        
-        {/* Pincers/Claws - left */}
-        <path
-          d="M 38 40 Q 32 38 28 35 Q 25 33 24 30 Q 23 28 24 26 Q 25 25 27 26 Q 30 28 33 32 Q 36 36 38 38 Z"
-          fill="currentColor"
-          opacity="0.85"
-        />
-        <ellipse cx="26" cy="28" rx="3" ry="4" fill="currentColor" opacity="0.9" transform="rotate(-30 26 28)"/>
-        
-        {/* Pincers/Claws - right */}
-        <path
-          d="M 62 40 Q 68 38 72 35 Q 75 33 76 30 Q 77 28 76 26 Q 75 25 73 26 Q 70 28 67 32 Q 64 36 62 38 Z"
-          fill="currentColor"
-          opacity="0.85"
-        />
-        <ellipse cx="74" cy="28" rx="3" ry="4" fill="currentColor" opacity="0.9" transform="rotate(30 74 28)"/>
-        
-        {/* Legs - left side */}
-        <line x1="44" y1="48" x2="36" y2="52" stroke="currentColor" strokeWidth="2" opacity="0.7"/>
-        <line x1="44" y1="54" x2="36" y2="60" stroke="currentColor" strokeWidth="2" opacity="0.7"/>
-        <line x1="44" y1="60" x2="38" y2="68" stroke="currentColor" strokeWidth="1.5" opacity="0.7"/>
-        <line x1="46" y1="66" x2="40" y2="74" stroke="currentColor" strokeWidth="1.5" opacity="0.7"/>
-        
-        {/* Legs - right side */}
-        <line x1="56" y1="48" x2="64" y2="52" stroke="currentColor" strokeWidth="2" opacity="0.7"/>
-        <line x1="56" y1="54" x2="64" y2="60" stroke="currentColor" strokeWidth="2" opacity="0.7"/>
-        <line x1="56" y1="60" x2="62" y2="68" stroke="currentColor" strokeWidth="1.5" opacity="0.7"/>
-        <line x1="54" y1="66" x2="60" y2="74" stroke="currentColor" strokeWidth="1.5" opacity="0.7"/>
-        
-        {/* Head/Eyes */}
-        <circle cx="47" cy="38" r="1.5" fill="#FFD700" opacity="0.9"/>
-        <circle cx="53" cy="38" r="1.5" fill="#FFD700" opacity="0.9"/>
-      </g>
-      
-      {/* Decorative circle border */}
-      <circle cx="50" cy="50" r="48" stroke="currentColor" strokeWidth="1.5" fill="none" opacity="0.3"/>
+      <defs>
+        <linearGradient id="waterGradient" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stopColor="#7DD3FC" />
+          <stop offset="60%" stopColor="#22D3EE" />
+          <stop offset="100%" stopColor="#14B8A6" />
+        </linearGradient>
+        <linearGradient id="sunGradient" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#FFF7E6" />
+          <stop offset="60%" stopColor="#FFE4C4" />
+          <stop offset="100%" stopColor="#FFD8A8" />
+        </linearGradient>
+        <radialGradient id="sunGlow" cx="50%" cy="56%" r="60%">
+          <stop offset="0%" stopColor="#FFEFD6" stopOpacity="0.6" />
+          <stop offset="100%" stopColor="#FFEFD6" stopOpacity="0" />
+        </radialGradient>
+      </defs>
+
+      {/* Outer ring (subtle) */}
+      <circle cx="50" cy="50" r="48" stroke="#38BDF8" strokeWidth="1.5" opacity="0.25" />
+
+      {/* Sun glow */}
+      <circle cx="50" cy="56" r="16" fill="url(#sunGlow)" opacity="0.35" />
+
+      {/* Sunrise (semi-circle) */}
+      <path d="M 36 56 A 14 14 0 0 1 64 56 L 64 56 L 36 56 Z" fill="url(#sunGradient)" />
+
+      {/* Minimal fountain flow (center) */}
+      <path d="M 50 54 C 52 50 52 46 50 42 C 48 46 48 50 50 54" stroke="url(#waterGradient)" strokeWidth="2.5" strokeLinecap="round" fill="none" opacity="0.85" />
+
+      {/* Water ripples */}
+      <path d="M 22 60 Q 50 58 78 60" stroke="url(#waterGradient)" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.9" />
+      <path d="M 18 64 Q 50 62 82 64" stroke="url(#waterGradient)" strokeWidth="1.8" strokeLinecap="round" fill="none" opacity="0.8" />
+      <path d="M 14 68 Q 50 66 86 68" stroke="url(#waterGradient)" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.7" />
+      <path d="M 18 72 Q 50 71 82 72" stroke="url(#waterGradient)" strokeWidth="1.2" strokeLinecap="round" fill="none" opacity="0.6" />
+
+      {/* Subtle floral accents */}
+      <path d="M 26 57 C 24 55 22 55 21 57 C 22 59 24 60 26 58 Z" fill="#A7F3D0" opacity="0.9" />
+      <path d="M 74 57 C 76 55 78 55 79 57 C 78 59 76 60 74 58 Z" fill="#A7F3D0" opacity="0.9" />
+      <line x1="24" y1="58" x2="22" y2="60" stroke="#34D399" strokeWidth="1.2" strokeLinecap="round" opacity="0.8" />
+      <line x1="76" y1="58" x2="78" y2="60" stroke="#34D399" strokeWidth="1.2" strokeLinecap="round" opacity="0.8" />
     </svg>
   );
 
   if (variant === 'icon') {
-    return <ScorpionIcon />;
+    return <ResortIcon />;
   }
 
   return (
     <div className={`flex items-center gap-3 ${className}`}>
-      <ScorpionIcon />
+      <ResortIcon />
       {variant === 'full' && (
         <div className="flex flex-col leading-tight">
-          <span className={`font-bold tracking-wider ${text} bg-gradient-to-r from-amber-600 via-orange-500 to-amber-700 bg-clip-text text-transparent`}>
+          <span className={`font-bold tracking-wider ${text} bg-gradient-to-r from-sky-600 via-cyan-500 to-teal-600 bg-clip-text text-transparent`}>
             OKELLA
           </span>
           <span className="text-xs tracking-widest text-gray-600 dark:text-gray-400 -mt-1">
