@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   FiUpload, FiEdit, FiTrash2, FiEye, FiEyeOff, FiStar, 
@@ -215,9 +215,9 @@ const GalleryManagement = () => {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-gray-600 text-sm">Featured</p>
-                  <p className="text-2xl font-bold text-amber-600">{stats.featured}</p>
+                  <p className="text-2xl font-bold text-primary-600">{stats.featured}</p>
                 </div>
-                <FiStar className="text-3xl text-amber-500" />
+                <FiStar className="text-3xl text-primary-500" />
               </div>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-sm border">
@@ -344,7 +344,7 @@ const GalleryManagement = () => {
                   <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-2">
                     <button
                       onClick={() => toggleFeatured(image)}
-                      className={`p-2 rounded-full ${image.isFeatured ? 'bg-amber-500 text-white' : 'bg-white text-gray-700'} hover:scale-110 transition-transform`}
+                      className={`p-2 rounded-full ${image.isFeatured ? 'bg-primary-500 text-white' : 'bg-white text-gray-700'} hover:scale-110 transition-transform`}
                       title={image.isFeatured ? 'Remove from featured' : 'Add to featured'}
                     >
                       <FiStar className={image.isFeatured ? 'fill-current' : ''} />
@@ -375,7 +375,7 @@ const GalleryManagement = () => {
                   {/* Status Badges */}
                   <div className="absolute top-2 left-2 flex gap-1">
                     {image.isFeatured && (
-                      <span className="bg-amber-500 text-white text-xs px-2 py-1 rounded-full">
+                      <span className="bg-primary-500 text-white text-xs px-2 py-1 rounded-full">
                         Featured
                       </span>
                     )}
@@ -428,7 +428,7 @@ const GalleryManagement = () => {
                   <div className="text-xs text-gray-500 space-y-1">
                     <div>Order: {image.order}</div>
                     {image.metadata && (
-                      <div>{image.metadata.width}×{image.metadata.height}</div>
+                      <div>{image.metadata.width}Ã—{image.metadata.height}</div>
                     )}
                   </div>
                 </div>
@@ -602,3 +602,4 @@ const GalleryManagement = () => {
 };
 
 export default GalleryManagement;
+

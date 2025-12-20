@@ -80,7 +80,7 @@ const FeaturesSection = () => {
         >
           <h2 className="text-4xl md:text-5xl font-bold font-poppins mb-6">
             Why Choose{' '}
-            <span className="bg-gradient-to-r from-amber-600 via-orange-500 to-amber-700 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-sky-600 via-cyan-500 to-teal-600 bg-clip-text text-transparent">
               OKELLA
             </span>
           </h2>
@@ -182,7 +182,7 @@ const FeaturesSection = () => {
 
       {/* Background Decorations */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Floating Scorpion Icons */}
+        {/* Floating Water Icons */}
         <motion.div
           className="absolute top-1/4 left-1/4 text-primary-100 text-4xl opacity-30"
           animate={{ 
@@ -191,7 +191,7 @@ const FeaturesSection = () => {
           }}
           transition={{ duration: 6, repeat: Infinity }}
         >
-          🦂
+          🌊
         </motion.div>
         <motion.div
           className="absolute bottom-1/4 right-1/4 text-primary-100 text-3xl opacity-20"
@@ -201,12 +201,12 @@ const FeaturesSection = () => {
           }}
           transition={{ duration: 8, repeat: Infinity, delay: 2 }}
         >
-          🦂
+          🌊
         </motion.div>
 
         {/* Gradient Orbs */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-amber-200/20 to-orange-300/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-primary-200/20 to-scorpion-300/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-sky-200/20 to-cyan-300/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-primary-200/20 to-teal-300/20 rounded-full blur-3xl"></div>
       </div>
     </section>
   );

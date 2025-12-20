@@ -43,7 +43,7 @@ const Home = () => {
             >
               <h2 className="text-4xl md:text-5xl font-bold font-poppins mb-6">
                 Experience{' '}
-                <span className="bg-gradient-to-r from-amber-600 via-orange-500 to-amber-700 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-sky-600 via-cyan-500 to-teal-600 bg-clip-text text-transparent">
                   OKELLA
                 </span>
               </h2>
@@ -135,7 +135,7 @@ const Home = () => {
                 >
                   <div className="flex items-center mb-4">
                     {Array.from({ length: testimonial.rating }).map((_, i) => (
-                      <FiStar key={i} className="text-amber-400 fill-current" />
+                      <FiStar key={i} className="text-primary-300 fill-current" />
                     ))}
                   </div>
                   <p className="text-gray-700 mb-6 italic leading-relaxed">
@@ -189,9 +189,9 @@ const Home = () => {
             </motion.div>
           </div>
 
-          {/* Background Scorpion */}
+          {/* Background Water Icon */}
           <div className="absolute top-1/2 right-10 transform -translate-y-1/2 text-9xl opacity-10">
-            🦂
+            🌊
           </div>
         </section>
       </div>
@@ -200,3 +200,4 @@ const Home = () => {
 }
 
 export default Home
+

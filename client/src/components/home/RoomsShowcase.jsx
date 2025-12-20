@@ -99,7 +99,7 @@ const RoomsShowcase = () => {
         >
           <h2 className="text-4xl md:text-5xl font-bold font-poppins mb-6">
             Luxury{' '}
-            <span className="bg-gradient-to-r from-amber-600 via-orange-500 to-amber-700 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-sky-600 via-cyan-500 to-teal-600 bg-clip-text text-transparent">
               Accommodations
             </span>
           </h2>
@@ -223,7 +223,7 @@ const RoomsShowcase = () => {
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* Decorative Shapes */}
         <motion.div
-          className="absolute top-1/4 right-0 w-64 h-64 bg-gradient-to-bl from-amber-100/30 to-orange-200/30 rounded-full blur-3xl"
+          className="absolute top-1/4 right-0 w-64 h-64 bg-gradient-to-bl from-sky-100/30 to-cyan-200/30 rounded-full blur-3xl"
           animate={{ 
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.5, 0.3]
@@ -231,7 +231,7 @@ const RoomsShowcase = () => {
           transition={{ duration: 8, repeat: Infinity }}
         />
         <motion.div
-          className="absolute bottom-1/4 left-0 w-48 h-48 bg-gradient-to-tr from-primary-100/30 to-scorpion-200/30 rounded-full blur-3xl"
+          className="absolute bottom-1/4 left-0 w-48 h-48 bg-gradient-to-tr from-primary-100/30 to-teal-200/30 rounded-full blur-3xl"
           animate={{ 
             scale: [1.2, 1, 1.2],
             opacity: [0.5, 0.3, 0.5]

@@ -121,7 +121,7 @@ const HeroSection = () => {
                   transition={{ duration: 1, delay: 0.3 }}
                 >
                   Welcome to{' '}
-                  <span className="bg-gradient-to-r from-amber-400 via-orange-500 to-amber-600 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-sky-600 via-cyan-500 to-teal-600 bg-clip-text text-transparent">
                     OKELLA
                   </span>
                 </motion.h1>
@@ -217,7 +217,7 @@ const HeroSection = () => {
 
       {/* Floating Elements */}
       <div className="absolute inset-0 pointer-events-none">
-        {/* Scorpion silhouette */}
+        {/* Water shape */}
         <motion.div
           className="absolute top-1/4 right-1/4 opacity-10"
           animate={{ 
@@ -226,14 +226,14 @@ const HeroSection = () => {
           }}
           transition={{ duration: 8, repeat: Infinity }}
         >
-          <div className="text-6xl">🦂</div>
+          <div className="text-6xl">🌊</div>
         </motion.div>
 
         {/* Floating particles */}
         {Array.from({ length: 6 }).map((_, index) => (
           <motion.div
             key={index}
-            className="absolute w-2 h-2 bg-amber-400/30 rounded-full"
+            className="absolute w-2 h-2 bg-sky-300/30 rounded-full"
             style={{
               left: `${20 + index * 15}%`,
               top: `${30 + index * 10}%`,

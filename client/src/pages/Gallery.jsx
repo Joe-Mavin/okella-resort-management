@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import ImageGallery from '../components/gallery/ImageGallery';
@@ -40,15 +40,15 @@ const Gallery = () => {
               </h1>
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
                 Discover the beauty and luxury of{' '}
-                <span className="text-amber-300 font-semibold">OKELLA RESORT</span>{' '}
+                <span className="text-sky-300 font-semibold">OKELLA RESORT</span>{' '}
                 through our stunning visual journey
               </p>
             </motion.div>
           </div>
 
-          {/* Background Scorpion */}
+          {/* Background Water Icon */}
           <div className="absolute top-1/2 right-10 transform -translate-y-1/2 text-9xl opacity-10">
-            🦂
+            {'\uD83C\uDF0A'}
           </div>
         </section>
 
@@ -63,7 +63,7 @@ const Gallery = () => {
             >
               <h2 className="text-3xl md:text-4xl font-bold font-poppins mb-6 text-gray-900">
                 Explore Our{' '}
-                <span className="bg-gradient-to-r from-amber-600 via-orange-500 to-amber-700 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-sky-600 via-cyan-500 to-teal-600 bg-clip-text text-transparent">
                   Collection
                 </span>
               </h2>
@@ -146,3 +146,6 @@ const Gallery = () => {
 };
 
 export default Gallery;
+
+
+

@@ -30,7 +30,7 @@ const LoadingScreen = ({ message = 'Loading...' }) => {
           transition={{ delay: 0.3 }}
           className="mb-4"
         >
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-amber-600 via-orange-500 to-amber-700 bg-clip-text text-transparent">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-sky-600 via-cyan-500 to-teal-600 bg-clip-text text-transparent">
             OKELLA
           </h1>
           <p className="text-sm text-gray-600 tracking-widest mt-1">RESORT</p>

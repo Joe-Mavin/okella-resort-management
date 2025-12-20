@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+﻿import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { FiUsers, FiHome, FiDollarSign, FiCalendar, FiTrendingUp, FiArrowUp, FiArrowDown } from 'react-icons/fi'
@@ -75,7 +75,7 @@ const Dashboard = () => {
     blue: 'bg-blue-100 text-blue-600',
     green: 'bg-green-100 text-green-600',
     purple: 'bg-purple-100 text-purple-600',
-    orange: 'bg-orange-100 text-orange-600'
+    orange: 'bg-orange-100 text-primary-600'
   }
 
   return (
@@ -184,9 +184,9 @@ const Dashboard = () => {
                 </Link>
                 <Link
                   to="/admin/users"
-                  className="flex flex-col items-center justify-center p-6 bg-orange-50 rounded-lg hover:bg-orange-100 transition-colors"
+                  className="flex flex-col items-center justify-center p-6 bg-primary-50 rounded-lg hover:bg-primary-100 transition-colors"
                 >
-                  <FiUsers className="text-orange-600 mb-2" size={32} />
+                  <FiUsers className="text-primary-600 mb-2" size={32} />
                   <span className="text-sm font-medium text-gray-900">Manage Users</span>
                 </Link>
                 <Link
@@ -225,3 +225,4 @@ const Dashboard = () => {
 }
 
 export default Dashboard
+
