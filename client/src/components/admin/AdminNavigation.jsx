@@ -1,3 +1,18 @@
+﻿import React, { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import {
+  FiHome, FiUsers, FiCalendar, FiDollarSign, FiStar,
+  FiEdit3, FiActivity, FiImage, FiMenu, FiX
+} from 'react-icons/fi';
+
+const AdminNavigation = () => {
+  const getIsDesktop = () => (typeof window !== 'undefined' ? window.innerWidth >= 1024 : false);
+
+  const [isDesktop, setIsDesktop] = useState(getIsDesktop);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(getIsDesktop);
+  const location = useLocation();
+
   useEffect(() => {
     const handleResize = () => {
       const desktop = getIsDesktop();
@@ -12,21 +27,6 @@
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-import React, { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  FiHome, FiUsers, FiCalendar, FiDollarSign, FiStar, 
-  FiEdit3, FiActivity, FiImage, FiMenu, FiX 
-} from 'react-icons/fi';
-
-const AdminNavigation = () => {
-  const getIsDesktop = () => (typeof window !== 'undefined' ? window.innerWidth >= 1024 : false);
-
-  const [isDesktop, setIsDesktop] = useState(getIsDesktop);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(getIsDesktop);
-  const location = useLocation();
-
   const navItems = [
     { name: 'Dashboard', path: '/admin', icon: <FiHome />, exact: true },
     { name: 'Rooms', path: '/admin/rooms', icon: <FiHome /> },
@@ -36,7 +36,7 @@ const AdminNavigation = () => {
     { name: 'Reviews', path: '/admin/reviews', icon: <FiStar /> },
     { name: 'Gallery', path: '/admin/gallery', icon: <FiImage /> },
     { name: 'Blog', path: '/admin/blog', icon: <FiEdit3 /> },
-    { name: 'Activities', path: '/admin/activities', icon: <FiActivity /> },
+    { name: 'Activities', path: '/admin/activities', icon: <FiActivity /> }
   ];
 
   const isActive = (path, exact = false) => {
