@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import {
   FiDroplet,
@@ -11,74 +11,97 @@ import {
 import galleryService from '../../services/galleryService';
 
 const FeaturesSection = () => {
-  const [facilityImages, setFacilityImages] = useState([]);
+  const [galleryImages, setGalleryImages] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [featureImageMap, setFeatureImageMap] = useState({});
 
-  const features = [
+  const features = useMemo(() => ([
     {
       icon: <FiDroplet className="text-3xl" />,
       title: 'Spacious Pool at the Heart',
       description:
         'Clean, inviting water for easy-going swims, pool games, and relaxed afternoons under the Bondo sun.',
-      category: 'pool'
+      galleryCategory: 'facilities'
     },
     {
       icon: <FiHome className="text-3xl" />,
       title: 'Grass-Thatched Rest Houses',
       description:
         'Shaded huts facing the pool where families can relax, chat, or enjoy a quiet view of the water.',
-      category: 'exterior'
+      galleryCategory: 'exterior'
     },
     {
       icon: <FiUsers className="text-3xl" />,
       title: 'Modern Changing Rooms',
       description:
         'Neat, private changing rooms with showers to keep your group comfortable before and after a swim.',
-      category: 'facilities'
+      galleryCategory: 'facilities'
     },
     {
       icon: <FiCoffee className="text-3xl" />,
       title: 'Event-Friendly Kitchen',
       description:
         'A fully furnished kitchen that supports birthday meals, church teas, and catered gatherings on-site.',
-      category: 'events'
+      galleryCategory: 'events'
     },
     {
       icon: <FiCalendar className="text-3xl" />,
       title: 'Host Your Gathering',
       description:
         'Space and seating for birthday parties, church meetings, get-togethers, and family catch-ups.',
-      category: 'events'
+      galleryCategory: 'events'
     },
     {
       icon: <FiBriefcase className="text-3xl" />,
       title: 'Team & Community Days',
       description:
         'Plenty of room for team-building activities, games, and relaxed bonding sessions by the pool.',
-      category: 'activities'
+      galleryCategory: 'activities'
     }
-  ];
-    
+  ]), []);
+  
   useEffect(() => {
-    fetchFacilityImages();
+    fetchGalleryImages();
   }, []);
+  
+  useEffect(() => {
+    if (!galleryImages.length) return;
 
-  const fetchFacilityImages = async () => {
+    setFeatureImageMap(() => {
+      const map = {};
+      features.forEach((feature, index) => {
+        let candidates = galleryImages;
+
+        if (feature.galleryCategory) {
+          const filtered = galleryImages.filter(img => img.category === feature.galleryCategory);
+          if (filtered.length) {
+            candidates = filtered;
+          }
+        }
+
+        if (candidates.length) {
+          const randomImage = candidates[Math.floor(Math.random() * candidates.length)];
+          map[index] = randomImage;
+        }
+      });
+      return map;
+    });
+  }, [galleryImages, features]);
+
+  const fetchGalleryImages = async () => {
     try {
-      const result = await galleryService.getFacilityImages();
+      const result = await galleryService.getImages({ active: 'true', limit: 50 });
       if (result.success) {
-        setFacilityImages(result.data);
+        setGalleryImages(result.data);
+      } else {
+        setGalleryImages([]);
       }
     } catch (error) {
-      console.error('Failed to fetch facility images:', error);
+      console.error('Failed to fetch gallery images:', error);
+      setGalleryImages([]);
     } finally {
       setLoading(false);
     }
-  };
-
-  const getFeatureImage = (category) => {
-    const categoryImages = facilityImages.filter(img => img.category === category);
-    return categoryImages.length > 0 ? categoryImages[0] : null;
   };
 
   return (
@@ -102,11 +125,11 @@ const FeaturesSection = () => {
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => {
-            const featureImage = getFeatureImage(feature.category);
-            
+            const featureImage = featureImageMap[index];
+
             return (
               <motion.div
-                key={index}
+                key={feature.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
