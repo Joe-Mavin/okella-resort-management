@@ -34,7 +34,7 @@ const ImageGallery = ({
       if (category) {
         result = await galleryService.getImagesByCategory(category, limit);
       } else {
-        const params = { active: 'true' };
+        const params = {};
         if (limit) {
           params.limit = limit;
         }
