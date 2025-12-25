@@ -13,8 +13,7 @@ const Footer = () => {
           <div>
             <Logo size="default" variant="full" className="text-primary-400 mb-4" />
             <p className="text-gray-400 mb-4">
-              Experience the mystique of OKELLA RESORT - where the spirit of the scorpion meets 
-              luxury. Unforgettable coastal paradise with world-class amenities awaits.
+              Okella Resort is a pool-centered retreat in Bondo, Siaya County. We host birthdays, church fellowships, team bonding days, and relaxed family hangouts by our spacious swimming pool.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-primary-400 transition-colors">
@@ -65,12 +64,12 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold font-poppins mb-4">Services</h4>
             <ul className="space-y-2 text-gray-400">
-              <li>🏊 Swimming Pool</li>
-              <li>🍽️ Fine Dining</li>
-              <li>💆 Spa & Wellness</li>
-              <li>🏄 Water Sports</li>
-              <li>🚗 Airport Transfer</li>
-              <li>📶 Free Wi-Fi</li>
+              <li>🏊 Sparkling swimming pool</li>
+              <li>🏡 Grass-thatched rest houses</li>
+              <li>🍲 Furnished events kitchen</li>
+              <li>🎉 Birthday & celebration hosting</li>
+              <li>🙏 Church & community gatherings</li>
+              <li>🤝 Team building space</li>
             </ul>
           </div>
 
@@ -103,7 +102,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {currentYear} OKELLA RESORT. All rights reserved.</p>
+          <p>&copy; {currentYear} Okella Resort. Proudly serving Bondo, Siaya County.</p>
           <div className="flex justify-center space-x-6 mt-4 text-sm">
             <Link to="/privacy" className="hover:text-primary-400 transition-colors">
               Privacy Policy
