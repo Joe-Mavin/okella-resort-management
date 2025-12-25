@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FiWifi, FiCoffee, FiMapPin, FiStar, FiShield, FiHeart } from 'react-icons/fi';
+import {
+  FiDroplet,
+  FiHome,
+  FiUsers,
+  FiCoffee,
+  FiCalendar,
+  FiBriefcase
+} from 'react-icons/fi';
 import galleryService from '../../services/galleryService';
 
 const FeaturesSection = () => {
