@@ -4,36 +4,39 @@ import { Helmet } from 'react-helmet-async'
 
 const About = () => {
   const stats = [
-    { icon: <FiAward size={32} />, value: '10+', label: 'Years of Excellence' },
-    { icon: <FiUsers size={32} />, value: '50K+', label: 'Happy Guests' },
-    { icon: <FiHeart size={32} />, value: '98%', label: 'Satisfaction Rate' },
-    { icon: <FiTrendingUp size={32} />, value: '4.9', label: 'Average Rating' }
+    { icon: <FiAward size={32} />, value: '6+', label: 'Years welcoming locals' },
+    { icon: <FiUsers size={32} />, value: '8K+', label: 'Poolside visitors hosted' },
+    { icon: <FiHeart size={32} />, value: '92%', label: 'Returning community groups' },
+    { icon: <FiTrendingUp size={32} />, value: '4.6', label: 'Guest review score' }
   ]
 
   const values = [
     {
-      title: 'Luxury & Comfort',
-      description: 'We provide world-class accommodations designed for your ultimate comfort and relaxation.'
+      title: 'Warm Kenyan hospitality',
+      description: 'We welcome every guest like a neighbour and look after families, churches, and teams with care.'
     },
     {
-      title: 'Sustainability',
-      description: 'Committed to eco-friendly practices and preserving the natural beauty of our coastal paradise.'
+      title: 'Clean & safe spaces',
+      description: 'Our staff keeps the pool sparkling, the rest houses tidy, and the changing rooms ready all day.'
     },
     {
-      title: 'Exceptional Service',
-      description: 'Our dedicated team ensures every guest receives personalized attention and care.'
+      title: 'Reliable event support',
+      description: 'From planning to pack-down, we help you organise smooth celebrations and gatherings.'
     },
     {
-      title: 'Local Culture',
-      description: 'Experience authentic Kenyan hospitality and immerse yourself in local traditions.'
+      title: 'Community connection',
+      description: 'We partner with local businesses in Bondo so your event supports the wider Siaya community.'
     }
   ]
 
   return (
     <>
       <Helmet>
-        <title>About Us - Luxury Coastal Resort</title>
-        <meta name="description" content="Learn about Luxury Coastal Resort - Kenya's premier beachfront destination offering world-class hospitality and unforgettable experiences." />
+        <title>About Okella Resort - Poolside getaway in Bondo</title>
+        <meta
+          name="description"
+          content="Discover how Okella Resort became a trusted poolside venue for families, churches, and teams in Bondo, Siaya County."
+        />
       </Helmet>
 
       {/* Hero Section */}
@@ -42,10 +45,10 @@ const About = () => {
         <div className="relative container mx-auto px-4 h-full flex items-center justify-center text-center">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold font-poppins mb-4">
-              About Our Resort
+              About Okella Resort
             </h1>
             <p className="text-xl max-w-2xl mx-auto">
-              Where luxury meets the beauty of Kenya's coastline
+              A relaxed poolside space serving Bondo, Siaya County
             </p>
           </div>
         </div>
@@ -65,20 +68,16 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-gray-600">
                 <p>
-                  Nestled along the pristine shores of Kenya's coast, Luxury Coastal Resort has been 
-                  creating unforgettable memories for over a decade. Our journey began with a simple 
-                  vision: to offer guests an unparalleled blend of luxury, comfort, and authentic 
-                  Kenyan hospitality.
+                  Okella Resort started as a family idea: build a dependable swimming spot where friends and neighbours could cool off in Bondo.
+                  We invested in a generous pool, planted trees for shade, and set up grass-thatched rest houses so guests could relax between swims.
                 </p>
                 <p>
-                  From our humble beginnings as a small beachfront property, we've grown into one of 
-                  the region's most celebrated destinations. Each room, service, and experience has been 
-                  carefully crafted to ensure that every moment of your stay is nothing short of extraordinary.
+                  Word spread across Siaya County. Families booked birthdays, churches planned fellowship days, and office teams chose us for bonding sessions.
+                  Each season we reinvested in what matters—cleaner water, safer walkways, a furnished events kitchen, and attentive staff.
                 </p>
                 <p>
-                  Today, we're proud to be recognized as a leader in luxury hospitality, while remaining 
-                  committed to sustainable tourism and supporting our local community. Our success is measured 
-                  not just in awards, but in the smiles of our guests and the lasting memories they take home.
+                  Today we still keep things honest and simple. We do not promise five-star glitz; we promise a clean pool, fair pricing, and friendly help for your gathering.
+                  If you need a relaxed venue with reliable support, Okella is ready to host you.
                 </p>
               </div>
             </motion.div>
@@ -90,8 +89,8 @@ const About = () => {
               className="relative h-96 rounded-xl overflow-hidden shadow-2xl"
             >
               <img
-                src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80"
-                alt="Resort View"
+                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&q=80"
+                alt="Grass-thatched huts beside a swimming pool"
                 className="w-full h-full object-cover"
               />
             </motion.div>
@@ -138,7 +137,7 @@ const About = () => {
               Our Values
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              The principles that guide everything we do
+              What you can count on whenever you spend time with us
             </p>
           </motion.div>
 
@@ -173,17 +172,16 @@ const About = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold font-poppins mb-4">
-              Experience the Difference
+              Plan your pool day with us
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Join thousands of satisfied guests who have made Luxury Coastal Resort 
-              their home away from home
+              Reserve the pool, book our rest houses, or ask about catering options—our team will guide you through every detail.
             </p>
             <a
               href="/rooms"
               className="inline-block bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-sand-100 transition-colors shadow-lg"
             >
-              Book Your Stay
+              Check Dates & Rates
             </a>
           </motion.div>
         </div>

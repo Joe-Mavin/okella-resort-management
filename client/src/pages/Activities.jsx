@@ -29,13 +29,13 @@ const Activities = () => {
     }
   }
 
-  const categories = ['Water Sports', 'Adventure', 'Relaxation', 'Cultural', 'Family']
+  const categories = ['Pool Fun', 'Family Gatherings', 'Church Groups', 'Team Building', 'Community Events']
 
   return (
     <>
       <Helmet>
-        <title>Activities & Experiences - Luxury Coastal Resort</title>
-        <meta name="description" content="Explore exciting activities and experiences at our resort. From water sports to cultural tours, create unforgettable memories." />
+        <title>Activities & Gatherings - Okella Resort</title>
+        <meta name="description" content="See how Okella Resort in Bondo, Siaya County hosts pool fun, birthdays, church gatherings, and team bonding events." />
       </Helmet>
 
       {/* Hero Section */}
@@ -44,10 +44,10 @@ const Activities = () => {
         <div className="relative container mx-auto px-4 h-full flex items-center justify-center text-center">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold font-poppins mb-4">
-              Activities & Experiences
+              Activities & Gatherings
             </h1>
             <p className="text-xl">
-              Adventure awaits at every corner
+              Pool-centered fun and relaxed events in Bondo, Siaya County
             </p>
           </div>
         </div>
@@ -88,7 +88,7 @@ const Activities = () => {
             <LoadingSpinner />
           ) : activities.length === 0 ? (
             <div className="text-center py-12">
-              <p className="text-gray-500 text-lg">No activities found</p>
+              <p className="text-gray-500 text-lg">No activities found. Reach out and we’ll help plan something special.</p>
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

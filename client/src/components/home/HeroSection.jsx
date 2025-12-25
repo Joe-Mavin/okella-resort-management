@@ -13,18 +13,18 @@ const HeroSection = () => {
   const fallbackImages = [
     {
       imageUrl: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80',
-      title: 'Welcome to OKELLA RESORT',
-      description: 'Where the Spirit of the Scorpion meets Luxury'
+      title: 'Welcome to Okella Pool Resort',
+      description: 'Easy-going pool days with friends and family in Bondo, Siaya County'
     },
     {
       imageUrl: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      title: 'Luxury Accommodations',
-      description: 'Experience comfort like never before'
+      title: 'Poolside Rest Houses',
+      description: 'Grass-thatched shelters overlooking the water and the Siaya breeze'
     },
     {
       imageUrl: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      title: 'Stunning Views',
-      description: 'Breathtaking landscapes await you'
+      title: 'Space for Every Gathering',
+      description: 'Room for birthdays, church groups, and team hangouts'
     }
   ];
 
@@ -120,9 +120,9 @@ const HeroSection = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, delay: 0.3 }}
                 >
-                  Welcome to{' '}
+                  Poolside moments in{' '}
                   <span className="bg-gradient-to-r from-sky-600 via-cyan-500 to-teal-600 bg-clip-text text-transparent">
-                    OKELLA
+                    Bondo, Siaya County
                   </span>
                 </motion.h1>
 
@@ -133,7 +133,7 @@ const HeroSection = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, delay: 0.5 }}
                 >
-                  {currentImage.description || "Where the Spirit of the Scorpion meets Luxury"}
+                  {currentImage.description || 'Relax by the pool, share a meal, and enjoy the fresh Bondo air.'}
                 </motion.p>
 
                 {/* Description */}
@@ -143,9 +143,7 @@ const HeroSection = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, delay: 0.7 }}
                 >
-                  Experience Kenya's most unique resort where luxury meets adventure. 
-                  Discover breathtaking accommodations, world-class amenities, and unforgettable memories 
-                  in the heart of Bondo, Siaya County.
+                  Okella Resort is a friendly pool-centered space made for everyday celebrations. Gather in our grass-thatched rest houses, use the modern changing rooms, or cook up a feast in our events kitchen—all within a short drive of Bondo town.
                 </motion.p>
 
                 {/* Action Buttons */}
@@ -159,7 +157,7 @@ const HeroSection = () => {
                     to="/rooms"
                     className="group bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl inline-flex items-center justify-center"
                   >
-                    Book Your Stay
+                    Plan Your Visit
                     <motion.span
                       className="ml-2"
                       animate={{ x: [0, 5, 0] }}
@@ -174,7 +172,7 @@ const HeroSection = () => {
                     className="group border-2 border-white/30 hover:border-white text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm hover:bg-white/10 inline-flex items-center justify-center"
                   >
                     <FiPlay className="mr-2" />
-                    Explore Resort
+                    Explore the Space
                   </button>
                 </motion.div>
               </motion.div>

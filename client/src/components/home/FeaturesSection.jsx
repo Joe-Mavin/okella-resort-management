@@ -9,43 +9,49 @@ const FeaturesSection = () => {
 
   const features = [
     {
-      icon: <FiWifi className="text-3xl" />,
-      title: 'High-Speed WiFi',
-      description: 'Stay connected with complimentary high-speed internet throughout the resort',
+      icon: <FiDroplet className="text-3xl" />,
+      title: 'Spacious Pool at the Heart',
+      description:
+        'Clean, inviting water for easy-going swims, pool games, and relaxed afternoons under the Bondo sun.',
+      category: 'pool'
+    },
+    {
+      icon: <FiHome className="text-3xl" />,
+      title: 'Grass-Thatched Rest Houses',
+      description:
+        'Shaded huts facing the pool where families can relax, chat, or enjoy a quiet view of the water.',
+      category: 'exterior'
+    },
+    {
+      icon: <FiUsers className="text-3xl" />,
+      title: 'Modern Changing Rooms',
+      description:
+        'Neat, private changing rooms with showers to keep your group comfortable before and after a swim.',
       category: 'facilities'
     },
     {
       icon: <FiCoffee className="text-3xl" />,
-      title: 'Fine Dining',
-      description: 'Experience exquisite cuisine at our world-class restaurants and bars',
-      category: 'dining'
+      title: 'Event-Friendly Kitchen',
+      description:
+        'A fully furnished kitchen that supports birthday meals, church teas, and catered gatherings on-site.',
+      category: 'events'
     },
     {
-      icon: <FiMapPin className="text-3xl" />,
-      title: 'Prime Location',
-      description: 'Perfectly situated next to Bondo Technical Training Institute in Siaya County',
-      category: 'exterior'
+      icon: <FiCalendar className="text-3xl" />,
+      title: 'Host Your Gathering',
+      description:
+        'Space and seating for birthday parties, church meetings, get-togethers, and family catch-ups.',
+      category: 'events'
     },
     {
-      icon: <FiStar className="text-3xl" />,
-      title: 'Luxury Amenities',
-      description: 'Indulge in premium facilities designed for your ultimate comfort',
-      category: 'facilities'
-    },
-    {
-      icon: <FiShield className="text-3xl" />,
-      title: '24/7 Security',
-      description: 'Rest easy with our round-the-clock security and safety measures',
-      category: 'facilities'
-    },
-    {
-      icon: <FiHeart className="text-3xl" />,
-      title: 'Exceptional Service',
-      description: 'Our dedicated staff ensures every moment of your stay is memorable',
-      category: 'facilities'
+      icon: <FiBriefcase className="text-3xl" />,
+      title: 'Team & Community Days',
+      description:
+        'Plenty of room for team-building activities, games, and relaxed bonding sessions by the pool.',
+      category: 'activities'
     }
   ];
-
+    
   useEffect(() => {
     fetchFacilityImages();
   }, []);
@@ -79,14 +85,10 @@ const FeaturesSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold font-poppins mb-6">
-            Why Choose{' '}
-            <span className="bg-gradient-to-r from-sky-600 via-cyan-500 to-teal-600 bg-clip-text text-transparent">
-              OKELLA
-            </span>
+            What makes Okella feel like home
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Discover what makes our resort the perfect destination for your luxury getaway. 
-            From world-class amenities to exceptional service, every detail is crafted for your comfort.
+            We keep things simple: a big clean pool, welcoming spaces, and helpful hosts who understand community events in Bondo, Siaya County.
           </p>
         </motion.div>
 
@@ -153,10 +155,10 @@ const FeaturesSection = () => {
         >
           <div className="bg-gradient-to-r from-primary-500 to-primary-600 rounded-3xl p-8 md:p-12 text-white">
             <h3 className="text-3xl md:text-4xl font-bold font-poppins mb-4">
-              Ready to Experience OKELLA?
+              Ready for a pool day in Bondo?
             </h3>
             <p className="text-xl mb-8 opacity-90">
-              Book your stay today and discover the spirit of the scorpion
+              Tell us about your birthday, church gathering, or team plan and we’ll help you set it up.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a
@@ -165,7 +167,7 @@ const FeaturesSection = () => {
                 whileTap={{ scale: 0.95 }}
                 className="bg-white text-primary-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
               >
-                View Rooms & Suites
+                Check Availability
               </motion.a>
               <motion.a
                 href="/contact"
@@ -173,7 +175,7 @@ const FeaturesSection = () => {
                 whileTap={{ scale: 0.95 }}
                 className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-primary-600 transition-all inline-flex items-center justify-center"
               >
-                Contact Us
+                Talk to Us
               </motion.a>
             </div>
           </div>

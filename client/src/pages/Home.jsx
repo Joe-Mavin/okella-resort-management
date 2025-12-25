@@ -42,14 +42,10 @@ const Home = () => {
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold font-poppins mb-6">
-                Experience{' '}
-                <span className="bg-gradient-to-r from-sky-600 via-cyan-500 to-teal-600 bg-clip-text text-transparent">
-                  OKELLA
-                </span>
+                A glimpse of Okella Resort
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                Take a visual journey through our resort and discover the beauty, 
-                luxury, and unique experiences that await you at OKELLA.
+                Browse real moments from our poolside spaces, grass-thatched rest houses, and happy gatherings in Bondo, Siaya County.
               </p>
             </motion.div>
 
@@ -97,32 +93,32 @@ const Home = () => {
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold font-poppins mb-6">
-                What Our Guests Say
+                Stories from our guests
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Don't just take our word for it - hear from our satisfied guests
+                Neighbours, churches, and workplaces share why they keep returning to our pool in Bondo.
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
-                  name: "Sarah Johnson",
-                  location: "Nairobi, Kenya",
+                  name: "Millicent Odhiambo",
+                  location: "Bondo, Kenya",
                   rating: 5,
-                  comment: "OKELLA RESORT exceeded all expectations! The scorpion theme is unique and the service is impeccable. Will definitely return!"
+                  comment: "Our children’s birthday party was easy to organise. The pool was clean, the kitchen helped with food, and staff supported us the whole day."
                 },
                 {
-                  name: "Michael Chen",
-                  location: "London, UK",
+                  name: "Pastor Daniel Owino",
+                  location: "Siaya Town",
                   rating: 5,
-                  comment: "An absolutely stunning resort with incredible attention to detail. The rooms are luxurious and the staff goes above and beyond."
+                  comment: "Perfect place for our church retreat. Plenty of seating under the rest houses and the team kept tea ready for everyone."
                 },
                 {
-                  name: "Amina Hassan",
-                  location: "Dubai, UAE",
+                  name: "Ruth Wanjiru",
+                  location: "Kisumu, Kenya",
                   rating: 5,
-                  comment: "The perfect blend of luxury and authenticity. OKELLA offers a truly unique experience that you won't find anywhere else."
+                  comment: "We brought our office team for bonding. Everyone enjoyed the pool games and we used the kitchen for a shared lunch. We will be back."
                 }
               ].map((testimonial, index) => (
                 <motion.div
@@ -166,24 +162,23 @@ const Home = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-bold font-poppins mb-6">
-                Begin Your OKELLA Journey
+                Plan your pool day at Okella
               </h2>
               <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
-                Where the spirit of the scorpion meets luxury. Book your unforgettable 
-                stay at Kenya's most unique resort and create memories that last a lifetime.
+                Tell us about your birthday, fellowship, or team outing. We’ll reserve the pool, rest houses, and kitchen to suit your group.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/rooms"
                   className="bg-white text-primary-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg inline-flex items-center justify-center"
                 >
-                  Book Your Stay
+                  Check Availability
                 </Link>
                 <Link
                   to="/contact"
                   className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-primary-600 transition-all inline-flex items-center justify-center"
                 >
-                  Contact Us
+                  Talk to Us
                 </Link>
               </div>
             </motion.div>
