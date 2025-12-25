@@ -78,6 +78,11 @@ const connectDB = async () => {
 
 connectDB();
 
+// Lightweight health check endpoint for uptime monitoring
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
+
 // API routes
 app.use('/api/auth', authRoutes);
 app.use('/api/rooms', roomRoutes);
